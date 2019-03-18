@@ -1,0 +1,36 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Nth Fibonacci Number</title>
+</head>
+<body>
+    <section class="fibonacci-ui">
+        <div class="container">
+            <form method="GET">
+                <input type="search" placeholder="Enter a Number " name="value">
+                <button>Enter</button>
+            </form>
+            <div>
+                {% if number == Null %}
+                    <p>Nth Element in Fibonacci sequence : </p>
+                {% elif n == 1 %}
+                    <p>{{number}}st Element in Fibonacci sequence : {{result}}</p>
+                {% elif n == 2 %}
+                    <p>{{number}}nd Element in Fibonacci sequence : {{result}}</p>
+                {% elif n == 3 %}
+                    <p>{{number}}rd Element in Fibonacci sequence : {{result}}</p>
+                {% else %}
+                    <p>{{number}}th Element in Fibonacci sequence : {{result}}</p>
+                {% endif %}
+                <br/>
+                <p> Latency: {{latency}} ms</p>
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>
